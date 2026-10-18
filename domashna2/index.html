@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table width="100%">
+    <tr>
+        <td width="78%" valign="top">
+            <h1><strong>Smart Home</strong></h1>
+            <nav>
+                <a href="#dnevna"><strong>Living Room</strong></a> |
+                <a href="#kujna"><strong>Kitchen</strong></a> |
+                <a href="#spalna"><strong>Bedroom</strong></a> |
+                <a href="#gradina"><strong>Garden</strong></a>
+            </nav>
+        </td>
+
+        <td  valign="top">
+            <h2>Notifications</h2>
+
+            <details>
+                <summary>Show notifications <strong>(5)</strong></summary>
+                <ul>
+                    <li>Kitchen: Smoke detected!</li>
+                    <li>Kitchen: Water leak detected!</li>
+                    <li>Garden: Soil moisture is too low!</li>
+                    <li>Garden: Rain sensor is not active!</li>
+                    <li>Kitchen: Gas leak sensor is OFF.</li>
+                </ul>
+            </details>
+        </td>
+    </tr>
+    </table>
+    <hr>
+    <section id="dnevna">
+        
+        <h2><strong>Livingroom</strong></h2>
+        
+            <h3>Temperature sensor <input type="color" value="#008000" disabled> ON</h3>
+        
+                <ul><h4>Temperature: <input type="number" min="-20" max="100" value="22"> °C</h4></ul>
+        
+                <h5>Battery level: <input type="range" min="0" max="100" value="85" disabled></h5>
+        
+            <h3>Light sensor <input type="color" value="#008000" disabled> ON</h3>
+    
+                <ul><h4>Light level: <input type="number" min="0" max="100" value="75" disabled> %</h4></ul>
+        
+                <h5>Battery level: <input type="range" min="0" max="100" value="73" disabled></h5>
+        
+            <h3>Noise sensor <input type="color" value="#008000" disabled> ON</h3>
+    
+                <ul><h4>Noise level: <input type="range" min="0" max="100" value="35" disabled> dB</h4></ul>
+        
+                <h5>Battery level: <input type="range" min="0" max="100" value="43" disabled></h5>
+
+            <details>
+                <summary>Show more: Room Rules</summary>
+                <ul>
+                    <li>Temperature must be between 20°C and 24°C.</li>
+                    <li>Light level should be between 30% and 80%.</li>
+                    <li>Noise level must remain below 60 dB.</li>
+                </ul>
+            </details>
+                
+    </section>
+    <hr>
+    <section id="kujna">
+        <h2><strong>Kitchen</strong></h2>
+
+            <h3>Smoke sensor  <input type="color" value="#008000" disabled> ON</h3>
+
+                <ul><p>Smoke detected?</p>
+
+                    <input type="radio" name="smoke" id="smoke-yes" checked disabled>
+                    <label for="smoke-yes">Detected</label>
+
+                    <input type="radio" name="smoke" id="smoke-no" disabled>
+                    <label for="smoke-no">Not detected</label>
+                </ul>  
+
+                <ul><p><strong>Warning:</strong> Smoke detected!</p></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="55" disabled></h5>
+            <h3>Gas leak sensor <input type="color" value="#ff0000" disabled> OFF</h3> 
+            
+                <ul><p><em>Gas level: Not monitored</em></p></ul>
+
+                <ul><p><strong>Warning:</strong> No Battery!</p></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="0" disabled></h5>
+        
+            <h3>Water leak sensor <input type="color" value="#008000" disabled> ON</h3>
+        
+                <ul><p>Water leak detected?</p>
+
+                <input type="checkbox" id="water-leak" checked disabled>
+                <label for="water-leak">Leak detected</label>
+                </ul>
+
+                <ul><p><strong>Warning:</strong> Water leak detected!</p></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="95" disabled></h5>
+
+            <details>
+                <summary>Show more: Room Rules</summary>
+                <ul>
+                    <li>Smoke must not be detected</li>
+                    <li>Gas leaks must not be detected.</li>
+                    <li>Water leaks must not be detected.</li>
+                </ul>
+            </details>
+                  
+    </section>
+    <hr>
+    <section id="spalna">
+        
+        <h2><strong>Bedroom</strong></h2>
+        
+            <h3>Temperature Sensor <input type="color" value="#008000" disabled> ON</h3>
+
+                <ul><h4>Temperature: <input type="number" min="-20" max="100" value="21"> °C</h4></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="65" disabled></h5>
+        
+            <h3>Humidity sensor <input type="color" value="#008000" disabled> ON</h3>
+        
+                <ul><h4>Humidity level: <input type="number" min="0" max="100" value="43" disabled> %</h4></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="17" disabled></h5>
+        
+            <h3>Motion sensor <input type="color" value="#008000" disabled> ON</h3>
+    
+                <ul><p>Motion detected?</p>
+
+                <input type="checkbox" id="motion" disabled>
+                <label for="motion">Motion detected</label>
+                </ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="5" disabled></h5>
+
+            <details>
+                <summary>Show more: Bedroom Rules</summary>
+                <ul>
+                    <li>Temperature must be between 18°C and 24°C.</li>
+                    <li>Humidity should be between 30% and 60%.</li>
+                    <li>The motion sensor must be active.</li>
+                </ul>
+            </details>
+
+    </section>
+    <hr>
+    <section id="gradina">
+        
+        <h2><strong>Garden</strong></h2>
+        
+            <h3>Soil Moisture Sensor <input type="color" value="#008000" disabled> ON</h3>
+        
+                <ul><h4>Soil moisture: <input type="range" min="0" max="100" value="25" disabled> %</h4></ul>
+
+                <ul><p><strong>Warning:</strong> Soil is too dry!</p></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="13" disabled></h5>
+        
+            <h3>Outdoor Temperature sensor <input type="color" value="#008000" disabled> ON</h3>
+    
+                <ul><h4>Temperature: <input type="number" min="-20" max="100" value="28"> °C</h4></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="25" disabled></h5>
+        
+            <h3>Rain Sensor <input type="color" value="#ff0000" disabled> OFF</h3>
+    
+                <ul><p><em>Rain: Not monitored</em></p></ul>
+
+                <ul><p><strong>Warning:</strong> Rain sensor not active!</p></ul>
+
+                <h5>Battery level: <input type="range" min="0" max="100" value="100" disabled></h5>    
+
+            <details>
+                <summary>Show more: Garden Rules</summary>
+                <ul>
+                    <li>Soil moisture should be at least 30%.</li>
+                    <li>Outdoor temperature must be between 10°C and 30°C.</li>
+                    <li>The rain sensor must be active to monitor rainfall.</li>
+                </ul>
+            </details>
+
+    </section>
+</body>
+</html>
